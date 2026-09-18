@@ -1,3 +1,5 @@
+// Dr. Maya Reynolds, PsyD — Official Therapy Website (Parts 2 & 3)
+// Production QA & SEO Verified
 "use client";
 
 import React, { useState } from "react";

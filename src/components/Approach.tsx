@@ -1,30 +1,30 @@
 import React from "react";
 import { MAYA_DATA } from "@/data/mayaData";
-import { Shield, Sparkles, Activity, Compass } from "lucide-react";
+import { Shield, Activity, Compass, Sparkles } from "lucide-react";
+
+function HeartHandIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.75"
+        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+      />
+    </svg>
+  );
+}
+
+const principleIcons = [HeartHandIcon, Shield, Activity, Compass];
 
 export default function Approach() {
   const { approach } = MAYA_DATA;
-
-  const principleIcons = [HeartHandIcon, Shield, Activity, Compass];
-
-  function HeartHandIcon(props: React.SVGProps<SVGSVGElement>) {
-    return (
-      <svg
-        {...props}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.75"
-          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-        />
-      </svg>
-    );
-  }
 
   return (
     <section id="approach" className="bg-[#f3ede3] py-20 md:py-32 border-b border-[#e5dfd5]">

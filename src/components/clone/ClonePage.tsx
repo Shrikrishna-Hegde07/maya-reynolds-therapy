@@ -21,6 +21,7 @@ export default function ClonePage() {
         </span>
         <a
           href="/"
+          aria-label="View Dr. Maya Reynolds Redesign"
           className="underline hover:text-[#b5c4af] transition-colors font-semibold ml-4"
         >
           View Dr. Maya Reynolds Redesign →

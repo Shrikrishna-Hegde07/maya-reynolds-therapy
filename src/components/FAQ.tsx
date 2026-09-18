@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { MAYA_DATA } from "@/data/mayaData";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function FAQ() {
   const { faqs } = MAYA_DATA;
@@ -62,6 +62,7 @@ export default function FAQ() {
                   id={panelId}
                   role="region"
                   aria-labelledby={headingId}
+                  hidden={!isOpen}
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
                     isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}

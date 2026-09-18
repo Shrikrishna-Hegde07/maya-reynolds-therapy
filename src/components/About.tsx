@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { MAYA_DATA } from "@/data/mayaData";
-import { MapPin, ShieldCheck, Heart } from "lucide-react";
+import { MapPin, ShieldCheck } from "lucide-react";
 
 export default function About() {
   const { about, therapist } = MAYA_DATA;

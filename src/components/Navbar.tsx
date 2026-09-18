@@ -47,6 +47,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
             </span>
             <Link
               href="/clone"
+              aria-label="View Part 1: Conejo Valley Counseling Clone"
               className="inline-flex items-center gap-1 text-[#f4f7f5] hover:text-[#cfded3] font-semibold underline underline-offset-2 transition-colors"
             >
               <span>View Part 1: Conejo Clone</span>

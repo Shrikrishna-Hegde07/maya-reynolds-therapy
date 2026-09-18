@@ -42,7 +42,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
         {/* Close Button */}
         <button
           onClick={resetAndClose}
-          className="absolute top-5 right-5 p-2 text-[#555f58] hover:text-[#222924] rounded-full hover:bg-[#e6ede8] transition-colors focus:outline-none"
+          className="absolute top-5 right-5 p-2 text-[#555f58] hover:text-[#222924] rounded-full hover:bg-[#e6ede8] transition-colors focus:outline-none cursor-pointer"
           aria-label="Close booking modal"
         >
           <X className="w-5 h-5" />
@@ -180,7 +180,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3.5 text-xs tracking-[0.18em] uppercase font-semibold text-white bg-[#3a5646] hover:bg-[#273a30] transition-colors rounded-xl shadow-soft"
+                  className="w-full py-3.5 text-xs tracking-[0.18em] uppercase font-semibold text-white bg-[#3a5646] hover:bg-[#273a30] transition-colors rounded-xl shadow-soft cursor-pointer"
                 >
                   Submit Consultation Request
                 </button>
@@ -206,7 +206,7 @@ export default function AppointmentModal({ isOpen, onClose }: AppointmentModalPr
             <div className="pt-4">
               <button
                 onClick={resetAndClose}
-                className="px-6 py-2.5 text-xs tracking-wider uppercase font-semibold text-[#3a5646] bg-[#e8eee8] hover:bg-[#cfded3] rounded-lg transition-colors"
+                className="px-6 py-2.5 text-xs tracking-wider uppercase font-semibold text-[#3a5646] bg-[#e8eee8] hover:bg-[#cfded3] rounded-lg transition-colors cursor-pointer"
               >
                 Close Window
               </button>

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { MAYA_DATA } from "@/data/mayaData";
-import { MapPin, Video, ArrowRight, ShieldCheck } from "lucide-react";
+import { MapPin, Video, ArrowRight } from "lucide-react";
 
 interface HeroProps {
   onOpenBooking?: () => void;

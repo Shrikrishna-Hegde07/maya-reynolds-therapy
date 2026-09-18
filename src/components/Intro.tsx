@@ -34,7 +34,7 @@ export default function Intro() {
             </div>
 
             {/* Quick 3 Pillar Cards */}
-            <div className="grid grid-cols-3 gap-3 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
               <div className="p-4 rounded-xl bg-white/60 border border-[#e5dfd5] flex flex-col items-center justify-center">
                 <HeartHandshake className="w-5 h-5 text-[#5d876e] mb-1.5" />
                 <span className="text-xs font-medium text-[#222924]">Collaborative</span>

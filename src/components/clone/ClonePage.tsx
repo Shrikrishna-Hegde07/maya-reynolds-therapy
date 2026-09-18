@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import CloneNavbar from "./CloneNavbar";
 import CloneHero from "./CloneHero";
 import CloneHope from "./CloneHope";
@@ -19,13 +20,13 @@ export default function ClonePage() {
         <span className="font-medium">
           Part 1: Conejo Valley Family Counseling (Original Reference Clone)
         </span>
-        <a
+        <Link
           href="/"
           aria-label="View Dr. Maya Reynolds Redesign"
           className="underline hover:text-[#b5c4af] transition-colors font-semibold ml-4"
         >
           View Dr. Maya Reynolds Redesign →
-        </a>
+        </Link>
       </div>
 
       <CloneNavbar />

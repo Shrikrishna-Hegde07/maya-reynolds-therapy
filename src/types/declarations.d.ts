@@ -24,8 +24,15 @@ declare module "lucide-react" {
   export const Clock: LucideIcon;
   export const Video: LucideIcon;
   export const Shield: LucideIcon;
+  export const ShieldCheck: LucideIcon;
   export const Sparkles: LucideIcon;
   export const Heart: LucideIcon;
+  export const Briefcase: LucideIcon;
+  export const Palette: LucideIcon;
+  export const Activity: LucideIcon;
+  export const HeartHandshake: LucideIcon;
+  export const HelpCircle: LucideIcon;
+  export const ArrowUp: LucideIcon;
   export const Compass: LucideIcon;
   export const Feather: LucideIcon;
   export const ArrowRight: LucideIcon;

@@ -7,7 +7,7 @@ export default function About() {
   const { about, therapist } = MAYA_DATA;
 
   return (
-    <section id="about" className="bg-[#faf8f5] py-20 md:py-32 border-b border-[#e5dfd5]">
+    <section id="about" className="bg-[#faf8f5] py-20 md:py-32 border-b border-[#e5dfd5] perspective-container">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Maya's Portrait in Arch Composition */}
@@ -15,7 +15,7 @@ export default function About() {
             <div className="relative w-full max-w-md">
               {/* Outer decorative border */}
               <div className="absolute -inset-3 rounded-t-[10rem] rounded-b-3xl border border-[#7ea48d]/40 -z-10" />
-              <div className="relative aspect-[3/4] w-full rounded-t-[9.5rem] rounded-b-2xl overflow-hidden shadow-card border-4 border-white bg-[#f3ece7]">
+              <div className="relative aspect-[3/4] w-full rounded-t-[9.5rem] rounded-b-2xl overflow-hidden shadow-elevated border-4 border-white bg-[#f3ece7] hover-lift">
                 <Image
                   src={therapist.portraitImage}
                   alt="Dr. Maya Reynolds, PsyD in Santa Monica"

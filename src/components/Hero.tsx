@@ -10,13 +10,14 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenBooking }: HeroProps) {
-  const { therapist, office } = MAYA_DATA;
+  const { therapist } = MAYA_DATA;
 
   return (
-    <section className="relative bg-[#faf8f5] overflow-hidden pt-8 pb-16 md:py-20 border-b border-[#e5dfd5]">
-      {/* Background Subtle Gradient Blobs */}
-      <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-[#e6ede8]/50 rounded-full blur-3xl pointer-events-none -mr-40 -mt-20" />
-      <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-[#f0ebe1]/60 rounded-full blur-3xl pointer-events-none -ml-40 -mb-20" />
+    <section className="relative bg-[#faf8f5] overflow-hidden pt-8 pb-16 md:py-20 border-b border-[#e5dfd5] perspective-container">
+      {/* Background Subtle Gradient Blobs — layered depth */}
+      <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-[#e6ede8]/40 rounded-full blur-3xl pointer-events-none -mr-40 -mt-20 transition-all duration-700 hover:scale-[1.02]" />
+      <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-[#f0ebe1]/50 rounded-full blur-3xl pointer-events-none -ml-40 -mb-20 transition-all duration-700 hover:scale-[1.02]" />
+      <div className="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-[#cfded3]/30 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -76,11 +77,11 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end">
             <div className="relative w-full max-w-sm sm:max-w-md">
               {/* Backing decorative frame */}
-              <div className="absolute inset-0 bg-[#e6ede8] rounded-3xl transform rotate-2 translate-x-3 translate-y-3 -z-10" />
-              <div className="absolute inset-0 border border-[#cfded3] rounded-3xl -z-10" />
+              <div className="absolute inset-0 bg-[#e6ede8] rounded-3xl transform rotate-2 translate-x-3 translate-y-3 -z-10 transition-transform duration-300 hover:rotate-1 hover:translate-x-4 hover:translate-y-4" />
+              <div className="absolute inset-0 border border-[#cfded3] rounded-3xl -z-10 transition-all duration-300 hover:border-[#a9c4b2]" />
 
               {/* Portrait Container */}
-              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-card bg-[#f3ece7]">
+              <div className="relative aspect-[3/4] w-full rounded-[1.6rem] overflow-hidden shadow-elevated bg-[#f3ece7] hover-lift">
                 <Image
                   src={therapist.portraitImage}
                   alt="Dr. Maya Reynolds, PsyD - Licensed Clinical Psychologist in Santa Monica"
@@ -91,7 +92,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 />
 
                 {/* Overlaid subtle caption badge */}
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 bg-white/95 backdrop-blur-md rounded-xl border border-[#e5dfd5] shadow-soft">
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 glass rounded-xl border border-[#e5dfd5] shadow-elevated hover-lift">
                   <div className="flex items-start justify-between gap-2">
                     <div>
                       <p className="font-serif text-base text-[#222924] font-medium leading-none">

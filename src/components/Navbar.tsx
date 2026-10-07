@@ -60,9 +60,9 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#faf8f5]/95 backdrop-blur-md shadow-soft py-3 border-b border-[#e5dfd5]"
-            : "bg-[#faf8f5] py-5 border-b border-[#e5dfd5]/60"
-        }`}
+            ? "bg-[#faf8f5]/92 backdrop-blur-xl shadow-soft py-3 border-b border-[#e5dfd5]/80"
+            : "bg-[#faf8f5]/85 backdrop-blur-md py-5 border-b border-[#e5dfd5]/40"
+        } perspective-container`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">

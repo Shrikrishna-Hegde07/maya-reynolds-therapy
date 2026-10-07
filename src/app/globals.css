@@ -29,6 +29,12 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Subtle layered depth texture — a soft, warm vignette that makes the page feel like a physical card */
+  background-image:
+    radial-gradient(ellipse at 20% -10%, rgba(230, 237, 232, 0.55), transparent 45%),
+    radial-gradient(ellipse at 100% 0%, rgba(240, 235, 225, 0.6), transparent 50%),
+    radial-gradient(ellipse at 50% 110%, rgba(232, 238, 232, 0.45), transparent 55%);
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -57,12 +63,58 @@ h1, h2, h3, .font-serif {
   color: #5d876e;
 }
 
-/* Subtle transitions */
-.transition-smooth {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+/* --- Depth & 3D-like design tokens --- */
+:root {
+  --depth-1: 0 2px 6px -1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --depth-2: 0 4px 12px -2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.03);
+  --depth-3: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
+  --depth-4: 0 20px 40px -10px rgba(0, 0, 0, 0.14);
+  --perspective: perspective(30px);
+}
+
+/* Perspective-aware container — children with transform-style: preserve-3d will respect */
+.perspective-container {
+  perspective: var(--perspective);
+}
+
+/* Subtle hover lift with perspective tilt (no actual 3D rotation, just a gentle "tilt") */
+.hover-lift {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-2px) rotateX(-2deg);
+}
+.hover-lift:active {
+  transform: translateY(1px);
+}
+
+/* Glassmorphism overlay */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 /* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hover-lift {
+    transition: none;
+  }
+  .hover-lift:hover {
+    transform: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

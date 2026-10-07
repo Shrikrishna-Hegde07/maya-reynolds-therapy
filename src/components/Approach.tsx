@@ -27,7 +27,7 @@ export default function Approach() {
   const { approach } = MAYA_DATA;
 
   return (
-    <section id="approach" className="bg-[#f3ede3] py-20 md:py-32 border-b border-[#e5dfd5]">
+    <section id="approach" className="bg-[#f3ede3] py-20 md:py-32 border-b border-[#e5dfd5] perspective-container">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
@@ -47,7 +47,7 @@ export default function Approach() {
             return (
               <div
                 key={idx}
-                className="bg-white/80 backdrop-blur-sm p-7 rounded-2xl border border-[#e5dfd5] shadow-soft hover:shadow-card hover:bg-white transition-all flex flex-col justify-between"
+                className="group bg-white/70 backdrop-blur-md p-7 rounded-2xl border border-[#e5dfd5] shadow-soft hover:shadow-elevated hover:-translate-y-1 hover:border-[#7ea48d] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-10 h-10 rounded-lg bg-[#e8eee8] text-[#3a5646] flex items-center justify-center mb-4">

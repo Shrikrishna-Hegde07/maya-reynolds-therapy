@@ -8,7 +8,7 @@ export default function WhoWeHelp() {
   const icons = [Award, Briefcase, Palette];
 
   return (
-    <section id="who-i-help" className="bg-[#faf8f5] py-20 md:py-28 border-b border-[#e5dfd5]">
+    <section id="who-i-help" className="bg-[#faf8f5] py-20 md:py-28 border-b border-[#e5dfd5] perspective-container">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-16">
           <span className="eyebrow inline-block mb-2">{whoWeHelp.eyebrow}</span>
@@ -27,10 +27,10 @@ export default function WhoWeHelp() {
             return (
               <div
                 key={idx}
-                className="group relative p-8 sm:p-10 rounded-2xl bg-[#ffffff] border border-[#e5dfd5] shadow-soft hover:shadow-card hover:border-[#7ea48d] transition-all duration-300 flex flex-col justify-between"
+                className="group relative p-8 sm:p-10 rounded-2xl bg-white/80 backdrop-blur-sm border border-[#e5dfd5] shadow-elevated hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-[#e8eee8] text-[#3a5646] flex items-center justify-center mb-6 group-hover:bg-[#3a5646] group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-[#e8eee8] text-[#3a5646] flex items-center justify-center mb-6 group-hover:bg-[#3a5646] group-hover:text-white transition-all duration-300">
                     <Icon className="w-6 h-6" />
                   </div>
 

@@ -36,7 +36,7 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl border border-[#e5dfd5] shadow-2xs overflow-hidden transition-all duration-200 hover:border-[#7ea48d]"
+                className="bg-white/90 backdrop-blur-sm rounded-2xl border border-[#e5dfd5] shadow-elevated hover:shadow-elevated hover:-translate-y-1 transition-all duration-300 overflow-hidden hover-lift"
               >
                 <h3>
                   <button

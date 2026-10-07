@@ -15,7 +15,7 @@ export default function Office({ onOpenBooking }: OfficeProps) {
   const attributeIcons = [Shield, Feather, Sun, MapPin];
 
   return (
-    <section id="office" className="bg-[#f2ece2] py-20 md:py-32 border-b border-[#e5dfd5] relative overflow-hidden">
+    <section id="office" className="bg-[#f2ece2] py-20 md:py-32 border-b border-[#e5dfd5] relative overflow-hidden perspective-container">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-4">
@@ -35,7 +35,7 @@ export default function Office({ onOpenBooking }: OfficeProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch mb-16">
           {/* Main Large Office Image (Seating Area) */}
           <div className="lg:col-span-7 flex flex-col justify-between">
-            <div className="relative aspect-[16/10] sm:aspect-[16/11] w-full rounded-3xl overflow-hidden shadow-card border-4 border-white bg-[#e8e2d8] group">
+            <div className="relative aspect-[16/10] sm:aspect-[16/11] w-full rounded-3xl overflow-hidden shadow-elevated border-4 border-white bg-[#e8e2d8] group hover-lift">
               <Image
                 src={office.images[0].src}
                 alt={office.images[0].alt}
@@ -60,7 +60,7 @@ export default function Office({ onOpenBooking }: OfficeProps) {
                 return (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-xl bg-white/80 border border-[#e5dfd5] text-center flex flex-col items-center justify-center gap-1.5 shadow-2xs"
+                    className="p-3.5 rounded-xl bg-white/80 backdrop-blur-sm border border-[#e5dfd5] text-center flex flex-col items-center justify-center gap-1.5 shadow-elevated"
                   >
                     <Icon className="w-4 h-4 text-[#5d876e]" />
                     <span className="text-xs font-medium text-[#222924]">{attr}</span>
@@ -72,7 +72,7 @@ export default function Office({ onOpenBooking }: OfficeProps) {
 
           {/* Secondary Image & In-Person / Telehealth Card */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
-            <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-card border-4 border-white bg-[#e8e2d8] group">
+            <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-elevated border-4 border-white bg-[#e8e2d8] group hover-lift">
               <Image
                 src={office.images[1].src}
                 alt={office.images[1].alt}
@@ -88,7 +88,7 @@ export default function Office({ onOpenBooking }: OfficeProps) {
             </div>
 
             {/* Practice Details Card */}
-            <div className="p-7 rounded-3xl bg-white border border-[#e5dfd5] shadow-soft space-y-5">
+            <div className="p-7 rounded-3xl bg-white/90 backdrop-blur-sm border border-[#e5dfd5] shadow-elevated space-y-5">
               <div className="flex items-start gap-3">
                 <div className="w-9 h-9 rounded-lg bg-[#e8eee8] text-[#3a5646] flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />

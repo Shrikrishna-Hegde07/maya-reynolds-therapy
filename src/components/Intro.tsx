@@ -6,7 +6,7 @@ export default function Intro() {
   const { intro } = MAYA_DATA;
 
   return (
-    <section className="bg-[#f5f1eb] py-20 md:py-28 border-b border-[#e5dfd5]">
+    <section className="bg-[#f5f1eb] py-20 md:py-28 border-b border-[#e5dfd5] perspective-container">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-14">
           <span className="eyebrow inline-block">{intro.eyebrow}</span>
@@ -24,7 +24,7 @@ export default function Intro() {
           </div>
 
           <div className="md:col-span-6 space-y-6">
-            <div className="p-8 rounded-2xl bg-white/80 border border-[#e5dfd5] shadow-soft space-y-4">
+            <div className="p-8 rounded-2xl bg-white/85 backdrop-blur-sm border border-[#e5dfd5] shadow-elevated space-y-4 hover-lift">
               <p className="text-base sm:text-lg text-[#222924] font-light leading-relaxed italic border-l-2 border-[#5d876e] pl-4">
                 “{intro.paragraphs[2]}”
               </p>
@@ -35,15 +35,15 @@ export default function Intro() {
 
             {/* Quick 3 Pillar Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center">
-              <div className="p-4 rounded-xl bg-white/60 border border-[#e5dfd5] flex flex-col items-center justify-center">
+              <div className="p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-[#e5dfd5] shadow-elevated flex flex-col items-center justify-center hover-lift">
                 <HeartHandshake className="w-5 h-5 text-[#5d876e] mb-1.5" />
                 <span className="text-xs font-medium text-[#222924]">Collaborative</span>
               </div>
-              <div className="p-4 rounded-xl bg-white/60 border border-[#e5dfd5] flex flex-col items-center justify-center">
+              <div className="p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-[#e5dfd5] shadow-elevated flex flex-col items-center justify-center hover-lift">
                 <Compass className="w-5 h-5 text-[#5d876e] mb-1.5" />
                 <span className="text-xs font-medium text-[#222924]">Paced Carefully</span>
               </div>
-              <div className="p-4 rounded-xl bg-white/60 border border-[#e5dfd5] flex flex-col items-center justify-center">
+              <div className="p-4 rounded-xl bg-white/70 backdrop-blur-sm border border-[#e5dfd5] shadow-elevated flex flex-col items-center justify-center hover-lift">
                 <Sparkles className="w-5 h-5 text-[#5d876e] mb-1.5" />
                 <span className="text-xs font-medium text-[#222924]">Mind & Body</span>
               </div>

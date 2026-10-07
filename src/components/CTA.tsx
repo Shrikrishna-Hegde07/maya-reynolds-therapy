@@ -12,7 +12,7 @@ export default function CTA({ onOpenBooking }: CTAProps) {
   const { cta } = MAYA_DATA;
 
   return (
-    <section id="contact" className="bg-[#273a30] text-[#f4f7f5] py-20 md:py-28 relative overflow-hidden">
+    <section id="contact" className="bg-[#273a30] text-[#f4f7f5] py-20 md:py-28 relative overflow-hidden perspective-container">
       {/* Background soft ambient circles */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#3a5646]/40 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#476c56]/30 rounded-full blur-3xl pointer-events-none" />
@@ -33,7 +33,7 @@ export default function CTA({ onOpenBooking }: CTAProps) {
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={onOpenBooking}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-9 py-4 text-xs tracking-[0.18em] uppercase font-semibold text-[#273a30] bg-[#faf8f5] hover:bg-white active:scale-[0.98] transition-all rounded-sm shadow-soft cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-9 py-4 text-xs tracking-[0.18em] uppercase font-semibold text-[#273a30] bg-[#faf8f5]/90 backdrop-blur-sm hover:bg-white hover:shadow-elevated active:scale-[0.98] transition-all rounded-sm cursor-pointer hover-lift"
           >
             <Calendar className="w-4 h-4" />
             <span>{cta.primaryButton}</span>
@@ -41,7 +41,7 @@ export default function CTA({ onOpenBooking }: CTAProps) {
 
           <a
             href="#approach"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-xs tracking-[0.16em] uppercase font-semibold text-[#f4f7f5] border border-[#7ea48d] hover:bg-[#3a5646] transition-colors rounded-sm text-center"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-xs tracking-[0.16em] uppercase font-semibold text-[#f4f7f5] border border-[#7ea48d] hover:bg-[#3a5646] hover:border-[#3a5646] transition-all rounded-sm text-center hover-lift"
           >
             <span>{cta.secondaryButton}</span>
             <ArrowRight className="w-4 h-4" />

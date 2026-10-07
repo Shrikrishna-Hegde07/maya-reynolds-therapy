@@ -13,7 +13,7 @@ export default function Services({ onOpenBooking }: ServicesProps) {
   const { services } = MAYA_DATA;
 
   return (
-    <section id="services" className="bg-[#f7f4ed] py-20 md:py-32 border-b border-[#e5dfd5]">
+    <section id="services" className="bg-[#f7f4ed] py-20 md:py-32 border-b border-[#e5dfd5] perspective-container">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
@@ -44,9 +44,9 @@ export default function Services({ onOpenBooking }: ServicesProps) {
                     isReversed ? "lg:order-2" : "lg:order-1"
                   }`}
                 >
-                  <div className="relative group">
+                  <div className="relative group hover-lift">
                     <div className="absolute -inset-2 bg-[#cfded3]/40 rounded-3xl -z-10 group-hover:bg-[#cfded3]/70 transition-colors" />
-                    <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-card border border-[#e5dfd5]">
+                    <div className="relative aspect-[4/3] w-full rounded-[1.5rem] overflow-hidden shadow-elevated border border-[#e5dfd5]">
                       <Image
                         src={service.image}
                         alt={service.imageAlt}

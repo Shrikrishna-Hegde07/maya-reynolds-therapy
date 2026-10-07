@@ -6,7 +6,7 @@ export default function Specialties() {
   const { areasOfFocus } = MAYA_DATA;
 
   return (
-    <section id="focus" className="bg-[#faf8f5] py-20 md:py-28 border-b border-[#e5dfd5]">
+    <section id="focus" className="bg-[#faf8f5] py-20 md:py-28 border-b border-[#e5dfd5] perspective-container">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="eyebrow inline-block">CHALLENGES WE ADDRESS</span>
@@ -23,7 +23,7 @@ export default function Specialties() {
           {areasOfFocus.map((area, idx) => (
             <div
               key={idx}
-              className="relative p-6 rounded-2xl bg-white border border-[#e5dfd5] shadow-2xs hover:shadow-soft hover:border-[#5d876e] transition-all duration-300 flex flex-col justify-between group"
+              className="relative p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-[#e5dfd5] shadow-elevated hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group hover-lift"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">

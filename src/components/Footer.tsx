@@ -17,7 +17,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
   };
 
   return (
-    <footer className="bg-[#1c2922] text-[#d6ded8] pt-20 pb-12 border-t border-[#2d4035]">
+    <footer className="bg-[#1c2922] text-[#d6ded8] pt-20 pb-12 border-t border-[#2d4035] perspective-container">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-[#2d4035]">
           {/* Practice Identity */}
@@ -105,7 +105,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
             <span>© {new Date().getFullYear()} Dr. Maya Reynolds, PsyD.</span>
             <button
               onClick={scrollToTop}
-              className="p-2 rounded-full bg-[#273a30] text-[#cfded3] hover:text-white hover:bg-[#3a5646] transition-colors"
+              className="p-2 rounded-full bg-[#273a30] text-[#cfded3] hover:text-white hover:bg-[#3a5646] hover-lift transition-colors"
               aria-label="Back to top of page"
             >
               <ArrowUp className="w-4 h-4" />
